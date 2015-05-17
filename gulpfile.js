@@ -4,6 +4,7 @@ var reload      = browserSync.reload;
 var sass        = require('gulp-sass');
 var plumber     = require('gulp-plumber');
 var notify      = require('gulp-notify');
+var Pageres     = require('pageres');
 
 // browser-sync task for starting the server.
 gulp.task('browser-sync', function() {
@@ -23,12 +24,12 @@ gulp.task('browser-sync', function() {
 gulp.task('sass', function () {
   return gulp.src('scss/**/*.scss')
   .pipe(sass({
-        style: 'compressed',
-        errLogToConsole: false,
-        onError: function(err) {
-            return notify().write(err);
-        }
-    }))
+    style: 'compressed',
+    errLogToConsole: false,
+    onError: function(err) {
+      return notify().write(err);
+    }
+  }))
   .pipe(gulp.dest('assets/css'))
   .pipe(reload({stream:true}));
 });
@@ -38,8 +39,42 @@ gulp.task('bs-reload', function () {
   browserSync.reload();
 });
 
+gulp.task('screenshot-desktop', function() {
+  var pageres = new Pageres({delay: 1})
+  .src('http://localhost:2368', ['1366x768'], {crop: false, filename: '<%= date %>-<%= time %>'})
+  .dest(__dirname + '/resources/progress/desktop');
+
+  pageres.run(function (err) {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log('--desktop captured--');
+    };
+
+  });
+});
+
+gulp.task('screenshot-mobile', function() {
+  var pageres = new Pageres({delay: 1})
+  .src('http://localhost:2368', ['iphone 5s'], {crop: false, filename: '<%= date %>-<%= time %>'})
+  .dest(__dirname + '/resources/progress/mobile');
+
+  pageres.run(function (err) {
+    if(err) {
+      console.log(err);
+    } else {
+      console.log('--mobile captured--');
+    };
+
+  });
+});
+
+gulp.task('screenshots', ['screenshot-desktop', 'screenshot-mobile'], function (){
+  console.log('--all captured--');
+});
+
 // Default task to be run with `gulp`
-gulp.task('default', ['sass', 'browser-sync'], function () {
-  gulp.watch(['scss/**/*.scss'], ['sass']);
+gulp.task('default', ['sass', 'browser-sync', 'screenshots'], function () {
+  gulp.watch(['scss/**/*.scss'], ['sass', 'screenshots']);
   gulp.watch(['*.html', 'js/*.js', 'partials/*.html'], ['bs-reload']);
 });
