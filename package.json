@@ -1,0 +1,32 @@
+{
+  "name": "woodiwiss-theme-2015",
+  "version": "1.0.0",
+  "description": "A theme for Darren Woodiwiss' personal portfolio website - woodiwiss.me",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:dwoodiwiss/woodiwiss-theme-2015.git"
+  },
+  "keywords": [
+    "portfolio",
+    "blog",
+    "ghost-blog",
+    "theme"
+  ],
+  "author": "@DWoodiwiss <Darren Woodiwiss>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dwoodiwiss/woodiwiss-theme-2015/issues"
+  },
+  "homepage": "http://woodiwiss.me",
+  "devDependencies": {
+    "browser-sync": "^2.7.1",
+    "gulp": "^3.8.11",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.0.0",
+    "gulp-sass": "^2.0.1"
+  }
+}
