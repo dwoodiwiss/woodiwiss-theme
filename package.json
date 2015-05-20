@@ -28,6 +28,7 @@
     "gulp-notify": "^2.2.0",
     "gulp-plumber": "^1.0.0",
     "gulp-sass": "^2.0.1",
+    "normalize-scss-vanilla": "git://github.com/akuda/normalize-scss-vanilla",
     "pageres": "^1.3.0"
   }
 }

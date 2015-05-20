@@ -1,0 +1,29 @@
+{{!< default}}
+
+<section class="portfolio">
+  {{#foreach posts}}
+    {{^has tag="Blog"}}
+      <section>
+        <a href="{{url}}" title="{{title}}">
+          {{#if image}}
+            <img height="50" src="{{image}}" alt="{{title}}">
+          {{/if}}
+          <span class="hidden">{{title}}</span>
+        </a>
+      </section>
+      <br>
+    {{/has}}
+  {{/foreach}}
+</section>
+
+<section class="blog">
+  {{#foreach posts}}
+    {{#has tag="Blog"}}
+      <ul>
+        <li>
+          <a href="{{url}}" title="{{title}}">{{title}}</a>
+        </li>
+      </ul>
+    {{/has}}
+  {{/foreach}}
+</section>

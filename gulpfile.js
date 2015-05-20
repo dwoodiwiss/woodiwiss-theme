@@ -24,7 +24,7 @@ gulp.task('browser-sync', function() {
 gulp.task('sass', function () {
   return gulp.src('scss/**/*.scss')
   .pipe(sass({
-    style: 'compressed',
+    outputStyle: 'compressed',
     errLogToConsole: false,
     onError: function(err) {
       return notify().write(err);
@@ -76,5 +76,5 @@ gulp.task('screenshots', ['screenshot-desktop', 'screenshot-mobile'], function (
 // Default task to be run with `gulp`
 gulp.task('default', ['sass', 'browser-sync', 'screenshots'], function () {
   gulp.watch(['scss/**/*.scss'], ['sass', 'screenshots']);
-  gulp.watch(['*.html', 'js/*.js', 'partials/*.html'], ['bs-reload']);
+  gulp.watch(['*.html', '*.hbs', 'partials/*.html', 'partials/*.hbs', 'js/*.js'], ['bs-reload']);
 });
