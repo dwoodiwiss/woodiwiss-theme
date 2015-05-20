@@ -21,7 +21,8 @@
     {{#has tag="Blog"}}
       <ul>
         <li>
-          <a href="{{url}}" title="{{title}}">{{title}}</a>
+          {{!-- <a href="{{url}}" title="{{title}}">{{title}} - {{date published_at format="MMMM DD, YYYY"}}</a> --}}
+          <a href="{{url}}" title="{{title}}">{{title}} - {{date published_at timeago="true"}}</a>
         </li>
       </ul>
     {{/has}}

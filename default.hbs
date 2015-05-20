@@ -26,11 +26,11 @@
 
     <nav role="navigation">
       <ul>
-      {{#foreach @blog.navigation}}
+        {{#foreach @blog.navigation}}
         <li class="nav-{{slug}}{{#if current}} nav-current{{/if}}">
           <a href="{{url absolute="true"}}">{{label}}</a>
         </li>
-      {{/foreach}}
+        {{/foreach}}
       </ul>
     </nav>
 
@@ -41,10 +41,9 @@
   </main>
 
   <footer>
-    <div class="social text-center">
-
+    <section>
       <a target="_blank" href="http://twitter.com/dwoodiwiss">
-      <img src="{{asset "images/social/twitter.png"}}" alt="Twitter">
+        <img src="{{asset "images/social/twitter.png"}}" alt="Twitter">
       </a>
 
       <a target="_blank" href="http://www.facebook.com/profile.php?id=darrenwoodiwiss">
@@ -62,13 +61,10 @@
       <a target="_blank" href="{{ asset "mr-darren-woodiwiss-cv.pdf"}}">
         <img src="{{asset "images/social/cv.png"}}" alt="CV">
       </a>
-
-    </div>
-    <div class="inner">
-      <section class="copyright text-center">
-        <span>All content copyright <a href="{{@blog.url}}/">{{@blog.title}}</a> &copy; {{date format="YYYY"}} &bull; All rights reserved.</span>
-      </section>
-    </div>
+    </section>
+    <section>
+      <span>All content copyright <a href="{{@blog.url}}/">{{@blog.title}}</a> &copy; {{date format="YYYY"}} &bull; All rights reserved.</span>
+    </section>
   </footer>
 
   {{ghost_foot}}
