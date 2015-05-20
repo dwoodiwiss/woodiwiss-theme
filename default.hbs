@@ -1,10 +1,13 @@
 <!doctype html>
-<html lang="">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
+
   <title>{{meta_title}}</title>
   <meta name="description" content="{{meta_description}}">
+
+  <meta name="HandheldFriendly" content="True" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="shortcut icon" href="{{asset '/favicon.ico'}}">
@@ -13,13 +16,64 @@
   {{ghost_head}}
 
 </head>
-  <body class="{{body_class}}">
+<body class="{{body_class}}">
 
-    <main role="main">
-      {{{body}}}
-    </main>
+  <header>
+    <a href="{{@blog.url}}">
+      <h1>woodiwiss.<span>me</span></h1>
+    </a>
+    <h2>{{@blog.description}}</h2>
 
-    <script src="{{asset 'js/app.js'}}"></script>
+    <nav role="navigation">
+      <ul>
+      {{#foreach @blog.navigation}}
+        <li class="nav-{{slug}}{{#if current}} nav-current{{/if}}">
+          <a href="{{url absolute="true"}}">{{label}}</a>
+        </li>
+      {{/foreach}}
+      </ul>
+    </nav>
 
-  </body>
+  </header>
+
+  <main role="main">
+    {{{body}}}
+  </main>
+
+  <footer>
+    <div class="social text-center">
+
+      <a target="_blank" href="http://twitter.com/dwoodiwiss">
+      <img src="{{asset "images/social/twitter.png"}}" alt="Twitter">
+      </a>
+
+      <a target="_blank" href="http://www.facebook.com/profile.php?id=darrenwoodiwiss">
+        <img src="{{asset "images/social/facebook.png"}}" alt="Facebook">
+      </a>
+
+      <a target="_blank" href="https://github.com/dwoodiwiss">
+        <img src="{{asset "images/social/github.png"}}" alt="GitHub">
+      </a>
+
+      <a target="_blank" href="http://uk.linkedin.com/pub/darren-woodiwiss/21/566/966/">
+        <img src="{{asset "images/social/linkedin.png"}}" alt="LinkedIn">
+      </a>
+
+      <a target="_blank" href="{{ asset "mr-darren-woodiwiss-cv.pdf"}}">
+        <img src="{{asset "images/social/cv.png"}}" alt="CV">
+      </a>
+
+    </div>
+    <div class="inner">
+      <section class="copyright text-center">
+        <span>All content copyright <a href="{{@blog.url}}/">{{@blog.title}}</a> &copy; {{date format="YYYY"}} &bull; All rights reserved.</span>
+      </section>
+    </div>
+  </footer>
+
+  {{ghost_foot}}
+
+  <script src="{{asset 'js/app.js'}}"></script>
+
+</body>
 </html>
