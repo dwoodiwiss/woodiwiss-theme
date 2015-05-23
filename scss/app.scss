@@ -1,17 +1,43 @@
-@import "node_modules/normalize-scss-vanilla/normalize";
+@import 'settings.global';
+@import 'settings.colors';
 
+// @import 'tools.mixins';
+
+// @import 'generic.normalize';
+@import 'generic.box-sizing';
+@import 'generic.reset';
+// @import 'generic.shared';
+
+// @import 'elements.page';
+// @import 'elements.headings';
+// @import 'elements.links';
+// @import 'elements.lists';
+// @import 'elements.images';
+// @import 'elements.quotes';
+
+// @import 'objects.wrappers';
+// @import 'objects.layout';
+// @import 'objects.media';
+
+// @import 'components.page-title';
+// @import 'components.buttons';
+// @import 'components.testimonials';
+// @import 'components.avatars';
+
+// @import 'trumps.links';
+// @import 'trumps.widths';
 
 
 
 // Temp styles DELETE BELOW!
 .portfolio {
-  width: 50%;
   float: left;
+  width: 50%;
 }
 
 .blog {
-  width: 50%;
   float: right;
+  width: 50%;
 }
 
 footer {
