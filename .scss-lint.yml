@@ -36,7 +36,7 @@ linters:
 
   ElsePlacement:
     enabled: true
-    style: same_line # or 'new_line'
+    style: new_line # or 'new_line'
 
   EmptyLineBetweenBlocks:
     enabled: true
@@ -172,7 +172,7 @@ linters:
 
   StringQuotes:
     enabled: true
-    style: single_quotes # or double_quotes
+    style: double_quotes # or double_quotes
 
   TrailingSemicolon:
     enabled: true

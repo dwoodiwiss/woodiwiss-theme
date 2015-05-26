@@ -30,11 +30,11 @@ gulp.task("sass", function () {
       return notify().write(err);
     }
   }))
-  .pipe(autoprefixer({
-    browsers: ["> 5%, last 10 versions"],
-    cascade: false,
-    remove: true
-  }))
+  // .pipe(autoprefixer({
+  //   browsers: ["> 5%, last 10 versions"],
+  //   cascade: false,
+  //   remove: true
+  // }))
   .pipe(gulp.dest("assets/css"))
   .pipe(reload({stream:true}));
 });
@@ -53,7 +53,7 @@ gulp.task("screenshot-desktop", function() {
     if (err) {
       console.log(err);
     } else {
-      console.log("--desktop captured--");
+      console.log("Desktop screenshot captured");
     };
 
   });
@@ -68,18 +68,18 @@ gulp.task("screenshot-mobile", function() {
     if(err) {
       console.log(err);
     } else {
-      console.log("--mobile captured--");
+      console.log("Mobile screenshot captured");
     };
 
   });
 });
 
-gulp.task("screenshots", ["screenshot-desktop", "screenshot-mobile"], function (){
-  console.log("--all captured--");
-});
+// gulp.task("screenshots", ["screenshot-desktop", "screenshot-mobile"], function (){
+//   console.log("--all captured--");
+// });
 
 // Default task to be run with `gulp`
-gulp.task("default", ["sass", "browser-sync", "screenshots"], function () {
+gulp.task("default", ["sass", "browser-sync", "screenshot-desktop", "screenshot-mobile"], function () {
   gulp.watch(["scss/**/*.scss"], ["sass", "screenshots"]);
   gulp.watch(["*.html", "*.hbs", "partials/*.html", "partials/*.hbs", "js/*.js"], ["bs-reload"]);
 });
