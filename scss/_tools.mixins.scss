@@ -1,0 +1,21 @@
+@mixin font-size2($size-value: 1.6) {
+  font-size: ($size-value * 10) + px; // duplicate value is for providing IE px based values
+  font-size: $size-value + rem; // REM will be used by browsers that support it
+}
+
+@mixin font-size($font-size, $line-height: auto) {
+  font-size: $font-size; // duplicate value is for providing IE px based values
+  font-size: ($font-size / $base-font-size) * 1rem; // REM will be used by browsers that support it
+
+  @if $line-height == auto {
+    line-height: ceil($font-size / $base-line-height) * ($base-line-height / $font-size);
+  }
+  @else {
+    @if (type-of($line-height) == number or $line-height == inherit or $line-height == normal) {
+      line-height: $line-height;
+    }
+    @elseif ($line-height != none and $line-height != false) {
+      @warn "D’oh! ‘#{$line-height}’ is not a valid value for `line-height`."
+    }
+  }
+}

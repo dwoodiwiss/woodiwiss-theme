@@ -1,0 +1,8 @@
+html {
+  background-color: $white;
+  font-size: ($base-font-size / 16px) * 1em;
+  line-height: $base-line-height / $base-font-size;
+  padding: $base-spacing-unit;
+  padding-bottom: 0;
+  // color: $color-text;
+}
