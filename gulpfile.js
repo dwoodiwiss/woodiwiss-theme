@@ -5,6 +5,7 @@ var sass         = require("gulp-sass");
 var notify       = require("gulp-notify");
 var Pageres      = require("pageres");
 var autoprefixer = require("gulp-autoprefixer");
+var sourcemaps   = require("gulp-sourcemaps");
 
 // browser-sync task for starting the server.
 gulp.task("browser-sync", function() {
@@ -23,6 +24,7 @@ gulp.task("browser-sync", function() {
 // will auto-update browsers
 gulp.task("sass", function () {
   return gulp.src("scss/**/*.scss")
+  .pipe(sourcemaps.init())
   .pipe(sass({
     outputStyle: "compressed",
     errLogToConsole: false,
@@ -35,6 +37,7 @@ gulp.task("sass", function () {
   //   cascade: false,
   //   remove: true
   // }))
+  .pipe(sourcemaps.write())
   .pipe(gulp.dest("assets/css"))
   .pipe(reload({stream:true}));
 });
@@ -74,12 +77,8 @@ gulp.task("screenshot-mobile", function() {
   });
 });
 
-// gulp.task("screenshots", ["screenshot-desktop", "screenshot-mobile"], function (){
-//   console.log("--all captured--");
-// });
-
 // Default task to be run with `gulp`
 gulp.task("default", ["sass", "browser-sync", "screenshot-desktop", "screenshot-mobile"], function () {
-  gulp.watch(["scss/**/*.scss"], ["sass", "screenshots"]);
+  gulp.watch(["scss/**/*.scss"], ["sass", "screenshot-desktop", "screenshot-mobile"]);
   gulp.watch(["*.html", "*.hbs", "partials/*.html", "partials/*.hbs", "js/*.js"], ["bs-reload"]);
 });
