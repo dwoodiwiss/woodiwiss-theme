@@ -5,6 +5,8 @@ $susy: (
   container-position: center,
   global-box-sizing: border-box,
   columns: 12,
+  gutters: 1/4,
+  gutter-position: after,
   debug: (
     image: show-columns,
     color: rgba(205, 205, 205, .35),
