@@ -6,6 +6,7 @@ var notify       = require("gulp-notify");
 var Pageres      = require("pageres");
 var autoprefixer = require("gulp-autoprefixer");
 var sourcemaps   = require("gulp-sourcemaps");
+var plumber      = require("gulp-plumber");
 
 // browser-sync task for starting the server.
 gulp.task("browser-sync", function() {
@@ -24,6 +25,7 @@ gulp.task("browser-sync", function() {
 // will auto-update browsers
 gulp.task("sass", function () {
   return gulp.src("scss/**/*.scss")
+  .pipe(plumber())
   .pipe(sourcemaps.init())
   .pipe(sass({
     outputStyle: "compressed",

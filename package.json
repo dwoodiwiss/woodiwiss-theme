@@ -27,6 +27,7 @@
     "gulp": "^3.8.11",
     "gulp-autoprefixer": "^2.3.0",
     "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.0.1",
     "gulp-sass": "^2.0.1",
     "gulp-sourcemaps": "^1.5.2",
     "normalize-scss-vanilla": "git://github.com/akuda/normalize-scss-vanilla",
