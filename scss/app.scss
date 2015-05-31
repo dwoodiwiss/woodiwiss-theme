@@ -1,10 +1,9 @@
 @import "settings.global";
 @import "settings.colors";
-@import "settings.grid";
 
+@import "tools.grid";
 @import "tools.mixins";
 
-// @import "generic.normalize";
 @import "generic.box-sizing";
 @import "generic.reset";
 // @import "generic.shared";
@@ -27,20 +26,3 @@
 
 // @import "trumps.links";
 // @import "trumps.widths";
-
-
-
-// Temp styles DELETE BELOW!
-.portfolio {
-  float: left;
-  width: 50%;
-}
-
-.blog {
-  float: right;
-  width: 50%;
-}
-
-footer {
-  clear: both;
-}
