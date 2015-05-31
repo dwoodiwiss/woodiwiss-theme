@@ -1,0 +1,39 @@
+.businesscard {
+  @include span(12 of 12);
+  display: table;
+}
+
+.businesscard__img,
+.businesscard__body {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.businesscard__img {
+  padding-right: $base-spacing-unit;
+
+  img {
+    display: block;
+    max-width: none;
+  }
+}
+
+.businesscard__body {
+  width: 100%;
+
+  .businesscard__nametag {
+    h1 {
+      @include font-size(20px);
+      line-height: 1.6em;
+      margin: 0;
+    }
+  }
+
+  .businesscard__jobrole {
+    @include font-size(13px);
+    line-height: 18px;
+    margin: 0;
+    width: 200px;
+  }
+}
+

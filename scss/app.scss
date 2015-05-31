@@ -15,7 +15,7 @@
 
 @import "generic.box-sizing";
 @import "generic.reset";
-// @import "generic.shared";
+@import "generic.shared";
 
 @import "elements.page";
 @import "elements.headings";
@@ -28,6 +28,7 @@
 // @import "objects.layout";
 // @import "objects.media";
 
+@import "components.businesscard";
 // @import "components.page-title";
 // @import "components.buttons";
 // @import "components.testimonials";

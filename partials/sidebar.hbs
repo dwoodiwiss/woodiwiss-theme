@@ -1,10 +1,6 @@
 <aside class="sidebar">
-  <a href="{{@blog.url}}">
-    <h1>{{@blog.title}}</h1>
-  </a>
-  <h2>{{@blog.description}}</h2>
-
-  <nav role="navigation">
+  {{> businesscard}}
+{{!--   <nav role="navigation">
     <ul>
       {{#foreach @blog.navigation}}
       <li class="nav-{{slug}}{{#if current}} nav-current{{/if}}">
@@ -13,4 +9,5 @@
       {{/foreach}}
     </ul>
   </nav>
+ --}}
 </aside>
