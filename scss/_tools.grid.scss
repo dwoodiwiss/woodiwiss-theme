@@ -1,1 +1,13 @@
 @import "../bower_components/susy/sass/_susy.scss";
+
+$susy: (
+  container: 80em,
+  container-position: center,
+  global-box-sizing: border-box,
+  columns: 12,
+  debug: (
+    image: show-columns,
+    color: rgba(205, 205, 205, .35),
+    output: background
+  )
+);
