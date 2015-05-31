@@ -2,7 +2,33 @@ html {
   background-color: $white;
   font-size: ($base-font-size / 16px) * 1em;
   line-height: $base-line-height / $base-font-size;
-  padding: $base-spacing-unit;
-  padding-bottom: 0;
-  // color: $color-text;
+  // padding: $base-spacing-unit;
+  // padding-bottom: 0;
+  padding: 0 33px;
+}
+
+.home-template {
+  @include container();
+}
+
+.post-template {
+  @include container();
+  .post {
+    img,
+    iframe {
+      @include span(12 of 12);
+    }
+  }
+}
+
+.sidebar {
+  @include span(12 of 12);
+}
+
+main {
+  @include span(12 of 12);
+}
+
+footer {
+  @include span(12 of 12);
 }
