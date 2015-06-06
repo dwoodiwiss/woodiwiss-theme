@@ -50,7 +50,7 @@ gulp.task("bs-reload", function () {
 });
 
 gulp.task("screenshot-desktop", function() {
-  var pageres = new Pageres({delay: 1})
+  var pageres = new Pageres({delay: 0.1})
   .src("http://localhost:2368", ["1366x768"], {crop: false, filename: "<%= date %>-<%= time %>"})
   .dest(__dirname + "/resources/progress/desktop");
 
@@ -65,7 +65,7 @@ gulp.task("screenshot-desktop", function() {
 });
 
 gulp.task("screenshot-mobile", function() {
-  var pageres = new Pageres({delay: 1})
+  var pageres = new Pageres({delay: 0.1})
   .src("http://localhost:2368", ["iphone 5s"], {crop: false, filename: "<%= date %>-<%= time %>"})
   .dest(__dirname + "/resources/progress/mobile");
 
