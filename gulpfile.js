@@ -13,7 +13,6 @@ gulp.task("browser-sync", function() {
     proxy: {
       target: "http://localhost:2368",
       middleware: function (req, res, next) {
-        console.log(req.url);
         next();
       }
     }

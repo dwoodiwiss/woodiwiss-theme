@@ -3,8 +3,10 @@ $base-line-height: 26px;
 
 $base-spacing-unit: $base-line-height;
 
-$merriweather: 'Merriweather', serif;
-$opensans: 'Open Sans', sans-serif;
-
-$header-font-family: $opensans;
-$body-font-family: $merriweather;
+// html {
+//   background-color: $white;
+//   font-size: ($base-font-size / 16px) * 1em;
+//   line-height: $base-line-height / $base-font-size;
+//   padding: $base-spacing-unit;
+//   padding-bottom: 0;
+// }
