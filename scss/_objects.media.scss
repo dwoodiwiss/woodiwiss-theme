@@ -1,0 +1,28 @@
+.o-media {
+  display: table;
+  width: 100%;
+  background-color: hotpink;
+}
+
+.o-media__img,
+.o-media__body {
+  display: table-cell;
+  vertical-align: top;
+  background-color: yellow;
+}
+
+.o-media__img {
+  padding-right: $base-spacing-unit;
+  background-color: red;
+
+  img {
+    display: block;
+    max-width: none;
+    background-color: brown;
+  }
+}
+
+.o-media__body {
+  width: 100%;
+  background-color: green;
+}
