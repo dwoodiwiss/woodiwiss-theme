@@ -9,7 +9,7 @@
 
 @import "settings.global";
 @import "settings.colors";
-@import "settings.typography";
+@import "settings.fonts";
 
 @import "tools.grid";
 @import "tools.mixins";
@@ -19,7 +19,7 @@
 @import "generic.shared";
 
 @import "elements.page";
-@import "elements.headings";
+@import "elements.typography";
 @import "elements.links";
 // @import "elements.lists";
 // @import "elements.images";

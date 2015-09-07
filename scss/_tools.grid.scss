@@ -13,3 +13,17 @@ $susy: (
     output: background
   )
 );
+
+// Setting up the Magic Grid
+$magic-grid: (
+  container: 100%,
+  columns: 12,
+  column-width: 4em,
+  gutter-width: 1em,
+  grid-padding: 1em,
+  debug: (
+    image: show-columns,
+    color: rgba(205, 205, 205, .35),
+    output: background
+  )
+);

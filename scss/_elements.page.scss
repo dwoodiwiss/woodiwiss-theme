@@ -8,11 +8,14 @@ html {
 }
 
 .home-template {
-  @include container();
+  @include container($magic-grid);
+  width: 50%;
+  position: absolute;
+  right: 0;
 }
 
 .post-template {
-  @include container();
+  @include container($magic-grid);
   .post {
     img,
     iframe {

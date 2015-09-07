@@ -1,3 +1,6 @@
+html {
+  font-family: $body-font-family;
+}
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $header-font-family;
@@ -32,3 +35,4 @@ h6 {
 // p {
 //   @include font-size(16px);
 // }
+
