@@ -3,7 +3,6 @@ var browserSync  = require("browser-sync");
 var reload       = browserSync.reload;
 var sass         = require("gulp-sass");
 var notify       = require("gulp-notify");
-var Pageres      = require("pageres");
 var autoprefixer = require("gulp-autoprefixer");
 var sourcemaps   = require("gulp-sourcemaps");
 var plumber      = require("gulp-plumber");
@@ -49,38 +48,8 @@ gulp.task("bs-reload", function () {
   browserSync.reload();
 });
 
-gulp.task("screenshot-desktop", function() {
-  var pageres = new Pageres({delay: 0.1})
-  .src("http://localhost:2368", ["1366x768"], {crop: false, filename: "<%= date %>-<%= time %>"})
-  .dest(__dirname + "/resources/progress/desktop");
-
-  pageres.run(function (err) {
-    if (err) {
-      console.log(err);
-    } else {
-      console.log("Desktop screenshot captured");
-    };
-
-  });
-});
-
-gulp.task("screenshot-mobile", function() {
-  var pageres = new Pageres({delay: 0.1})
-  .src("http://localhost:2368", ["iphone 5s"], {crop: false, filename: "<%= date %>-<%= time %>"})
-  .dest(__dirname + "/resources/progress/mobile");
-
-  pageres.run(function (err) {
-    if(err) {
-      console.log(err);
-    } else {
-      console.log("Mobile screenshot captured");
-    };
-
-  });
-});
-
 // Default task to be run with `gulp`
-gulp.task("default", ["sass", "browser-sync", "screenshot-desktop", "screenshot-mobile"], function () {
-  gulp.watch(["scss/**/*.scss"], ["sass", "screenshot-desktop", "screenshot-mobile"]);
+gulp.task("default", ["sass", "browser-sync"], function () {
+  gulp.watch(["scss/**/*.scss"], ["sass"]);
   gulp.watch(["*.html", "*.hbs", "partials/*.html", "partials/*.hbs", "js/*.js"], ["bs-reload"]);
 });
