@@ -1,25 +1,15 @@
 .businesscard {
-  @include span(12 of 12);
-  display: table;
-}
 
-.businesscard__img,
-.businesscard__body {
-  display: table-cell;
-  vertical-align: top;
-}
+  @include span(10 of 12);
+  @include push(2 of 12);
 
-.businesscard__img {
-  padding-right: $base-spacing-unit;
+  top: 28px;
+  position: relative;
 
-  img {
-    display: block;
-    max-width: 100px;
-  }
-}
 
-.businesscard__body {
-  width: 100%;
+  // @include container($magic-grid);
+  // background-color: red;
+
 
   .businesscard__nametag {
     h1 {
@@ -33,7 +23,6 @@
     @include font-size(13px);
     line-height: 18px;
     margin: 0;
-    width: 200px;
+    width: 150px;
   }
 }
-

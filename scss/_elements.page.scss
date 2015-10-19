@@ -4,28 +4,32 @@ html {
   line-height: $base-line-height / $base-font-size;
   // padding: $base-spacing-unit;
   // padding-bottom: 0;
-  padding: 0 33px;
+  padding: 0 33px 0 0;
 }
 
-.home-template {
+body {
+ // width: 100%;
   @include container($magic-grid);
-  width: 50%;
-  position: absolute;
-  right: 0;
 }
+
+.siteContent {
+  @include push(6 of 12);
+  @include span(6 of 12);
+}
+
+// .home-template {
+// }
 
 .post-template {
-  @include container($magic-grid);
+  // @include container($magic-grid);
   .post {
+    @include push(6 of 12);
+    @include span(6 of 12);
     img,
     iframe {
       @include span(12 of 12);
     }
   }
-}
-
-.sidebar {
-  @include span(12 of 12);
 }
 
 main {

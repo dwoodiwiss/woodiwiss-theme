@@ -1,0 +1,8 @@
+footer {
+  @include span(6 of 12);
+  @include push(6 of 12);
+  clear: right;
+  position: relative;
+  padding-top: 100px;
+  bottom: 0;
+}

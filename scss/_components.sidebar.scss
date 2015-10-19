@@ -1,0 +1,9 @@
+.sidebar {
+  @include span(5.85 of 12);
+  height: 100vh;
+  min-height: 700px;
+  background: url('../img/darren-creek.jpg') no-repeat center;
+  background-size: cover;
+  position: fixed;
+  overflow: hidden;
+}
