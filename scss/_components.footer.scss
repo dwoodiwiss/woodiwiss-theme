@@ -1,8 +1,23 @@
 footer {
-  @include span(6 of 12);
-  @include push(6 of 12);
+  @include span(12 of 12);
+  // @include push(2 of 12);
   clear: right;
-  position: relative;
-  padding-top: 100px;
+  position: absolute;
   bottom: 0;
+  color: white;
+  text-align: center;
+  @include font-size(10px);
+  // background-color: white;
+  .credits {
+    opacity: 0.6;
+    font-family: $header-font-family;
+    background-color: black;
+    span {
+      opacity: 1;
+      color: white;
+      a {
+        color: white;
+      }
+    }
+  }
 }

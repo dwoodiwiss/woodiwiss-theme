@@ -9,7 +9,7 @@ $susy: (
   gutter-position: after,
   debug: (
     image: show-columns,
-    color: rgba(205, 205, 205, .35),
+    color: rgba(205, 205, 205, 0),
     output: background
   )
 );
@@ -23,7 +23,7 @@ $magic-grid: (
   grid-padding: 1em,
   debug: (
     image: show-columns,
-    color: rgba(205, 205, 205, .35),
+    color: rgba(205, 205, 205, 0),
     output: background
   )
 );
