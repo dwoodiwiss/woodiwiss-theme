@@ -5,32 +5,27 @@
 <section class="siteContent">
 
   <section class="portfolio">
-    {{#foreach posts}}
-      {{^has tag="Blog"}}
-        <section>
-          <a href="{{url}}" title="{{title}}">
-            {{#if image}}
-              <img height="50" src="{{image}}" alt="{{title}}">
-            {{/if}}
-            <span class="hidden">{{title}}</span>
-          </a>
-        </section>
-        <br>
-      {{/has}}
-    {{/foreach}}
+    <ul>
+      {{#foreach posts}}
+        {{^has tag="Blog"}}
+          <li>
+            <a href="{{url}}" title="{{title}}">{{title}}</a><span>{{date published_at timeago="true"}}</span>
+          </li>
+        {{/has}}
+      {{/foreach}}
+    </ul>
   </section>
 
   <section class="blog">
-    {{#foreach posts}}
-      {{#has tag="Blog"}}
-        <ul>
+    <ul>
+      {{#foreach posts}}
+        {{#has tag="Blog"}}
           <li>
-            {{!-- <a href="{{url}}" title="{{title}}">{{title}} - {{date published_at format="MMMM DD, YYYY"}}</a> --}}
-            <a href="{{url}}" title="{{title}}">{{title}} - {{date published_at timeago="true"}}</a>
+            <a href="{{url}}" title="{{title}}">{{title}}</a><span>{{date published_at timeago="true"}}</span>
           </li>
-        </ul>
-      {{/has}}
-    {{/foreach}}
+        {{/has}}
+      {{/foreach}}
+    </ul>
   </section>
 
 </section>

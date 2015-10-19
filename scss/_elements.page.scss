@@ -12,9 +12,29 @@ body {
   @include container($magic-grid);
 }
 
+main {
+  @include span(12 of 12);
+}
+
 .siteContent {
   @include push(6 of 12);
   @include span(6 of 12);
+  padding-top: 30px;
+  ul {
+    padding-left: 0;
+    li {
+      padding: 10px 0;
+      list-style: none;
+      span {
+        padding-left: 20px;
+        @include font-size(12px);
+        color: $color-body-accent;
+      }
+    }
+  }
+  a {
+    font-family: $header-font-family;
+  }
 }
 
 // .home-template {
@@ -30,12 +50,4 @@ body {
       @include span(12 of 12);
     }
   }
-}
-
-main {
-  @include span(12 of 12);
-}
-
-footer {
-  @include span(12 of 12);
 }
