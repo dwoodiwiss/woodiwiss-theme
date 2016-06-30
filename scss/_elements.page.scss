@@ -9,16 +9,12 @@ html {
 
 body {
  // width: 100%;
-  @include container($magic-grid);
 }
 
 main {
-  @include span(12 of 12);
 }
 
 .siteContent {
-  @include push(6 of 12);
-  @include span(6 of 12);
   padding-top: 8px;
   ul {
     padding-left: 0;
@@ -41,14 +37,10 @@ main {
 // }
 
 .post-template {
-  // @include container($magic-grid);
   .post {
     padding-bottom: 100px;
-    @include push(6 of 12);
-    @include span(6 of 12);
     img,
     iframe {
-      @include span(12 of 12);
     }
   }
 }

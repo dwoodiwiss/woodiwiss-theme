@@ -32,7 +32,6 @@
     "gulp-sourcemaps": "^1.5.2"
   },
   "dependencies": {
-    "normalize.css": "^3.0.3",
-    "susy": "^2.2.5"
+    "normalize.css": "^3.0.3"
   }
 }

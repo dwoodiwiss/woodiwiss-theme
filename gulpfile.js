@@ -10,6 +10,7 @@ var plumber      = require("gulp-plumber");
 // browser-sync task for starting the server.
 gulp.task("browser-sync", function() {
   browserSync({
+    open: false,
     proxy: {
       target: "http://localhost:2368",
       middleware: function (req, res, next) {
