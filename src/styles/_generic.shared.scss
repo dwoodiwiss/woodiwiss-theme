@@ -1,6 +1,7 @@
 html {
   font-size: $base-font-size;
-  background-color: $white;
+  background-color: $black;
   line-height: $base-line-height;
-  color: $black
+  color: $white;
+  width: calc(100vw - 15px);
 }

@@ -2,3 +2,7 @@
   font-size: $size-value + px; // duplicate value is for providing IE px based values
   font-size: ($size-value / 10) + rem; // REM will be used by browsers that support it
 }
+
+@mixin transition($speed: .18s) {
+  transition: all $speed ease-in-out;
+}

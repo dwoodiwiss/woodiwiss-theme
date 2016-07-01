@@ -1,26 +1,10 @@
 blockquote {
-    quotes: "“" "”";
+  font-style: italic;
 
     p {
-        text-indent: -0.42em;
-
-        &:before {
-            content: open-quote;
-        }
-
-        &:after {
-            content: no-close-quote;
-        }
-
-        &:last-of-type {
-            margin-bottom: 0;
-
-            &:after {
-                content: close-quote;
-            }
-
-        }
-
+      @include font-size(22);
+      font-weight: 100;
+      line-height: $base-line-height*1.4;
     }
 
 }

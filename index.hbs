@@ -1,10 +1,8 @@
 {{!< default}}
 
-{{> sidebar }}
+<section class="content">
 
-<section class="siteContent">
-
-  <section class="portfolio">
+  <section class="content__list content__list--portfolio">
     <ul>
       {{#foreach posts}}
         {{^has tag="Blog"}}
@@ -13,10 +11,28 @@
           </li>
         {{/has}}
       {{/foreach}}
+
+      {{!-- @TODO REMOVE THIS  --}}
+      {{#foreach posts}}
+        {{^has tag="Blog"}}
+          <li>
+            <a href="{{url}}" title="{{title}}">{{title}}</a><span>{{date published_at timeago="true"}}</span>
+          </li>
+        {{/has}}
+      {{/foreach}}
+      {{#foreach posts}}
+        {{^has tag="Blog"}}
+          <li>
+            <a href="{{url}}" title="{{title}}">{{title}}</a><span>{{date published_at timeago="true"}}</span>
+          </li>
+        {{/has}}
+      {{/foreach}}
+      {{!-- END REMOVE --}}
+
     </ul>
   </section>
 
-  <section class="blog">
+  <section class="content__list content__list--blog">
     <ul>
       {{#foreach posts}}
         {{#has tag="Blog"}}

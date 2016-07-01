@@ -1,0 +1,66 @@
+.cover {
+  // height: 100vh;
+  // min-height: 700px;
+
+  position: fixed;
+  // left: 0;
+  // overflow: hidden;
+
+  height: 100%;
+
+  width: 45%;
+  padding: 60px;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+
+  .footer {
+    display: flex;
+    flex-flow: column;
+  }
+
+  .footer__social {
+    a:first-child {
+      padding-left: 0;
+    }
+
+    a {
+      padding: 5px;
+    }
+
+    img {
+      padding: 5px 0;
+    }
+  }
+
+  .footer__credits {
+    span {
+      @include font-size(12);
+
+      a {
+        @include font-size(12);
+        color: white;
+      }
+    }
+  }
+
+}
+
+.cover::after {
+  content: "";
+  background: url('../images/emma-long.jpg') no-repeat top;
+  position: absolute;
+  height: 100%;
+  opacity: 0.4;
+  // width: 100%;
+  // width: 45%;
+  display: flex;
+  background-size: cover;
+
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}

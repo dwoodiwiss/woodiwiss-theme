@@ -6,19 +6,17 @@ var concat       = require('gulp-concat');
 var uglify       = require('gulp-uglify');
 var imagemin     = require('gulp-imagemin');
 var cache        = require('gulp-cache');
-var minifycss    = require('gulp-minify-css');
+var minifycss    = require('gulp-clean-css');
 var sass         = require('gulp-sass');
 var browserSync  = require('browser-sync');
+var runSequence  = require('run-sequence');
 
 // browser-sync task for starting the server.
 gulp.task('browser-sync', function() {
   browserSync({
     open: false,
     proxy: {
-      target: 'http://localhost:2368',
-      middleware: function (req, res, next) {
-        next();
-      }
+      target: 'http://localhost:2368'
     }
   });
 });
@@ -46,8 +44,22 @@ gulp.task('styles', function(){
     .pipe(sass())
     .pipe(autoprefixer('last 2 versions'))
     .pipe(gulp.dest('assets/css/'))
-    .pipe(rename({suffix: '.min'}))
+    .pipe(browserSync.reload({stream:true}))
+});
+
+// styles task, will run when any SCSS files change & BrowserSync
+// will auto-update browsers
+gulp.task('stylesmin', function(){
+  gulp.src(['src/styles/**/*.scss'])
+    .pipe(plumber({
+      errorHandler: function (error) {
+        console.log(error.message);
+        this.emit('end');
+    }}))
+    .pipe(sass())
+    .pipe(autoprefixer('last 2 versions'))
     .pipe(minifycss())
+    .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest('assets/css/'))
     .pipe(browserSync.reload({stream:true}))
 });
@@ -69,9 +81,21 @@ gulp.task('scripts', function(){
     .pipe(browserSync.reload({stream:true}))
 });
 
+gulp.task('build', function(){
+
+});
+
 // Default task to be run with `gulp`
 gulp.task('default', ['browser-sync'], function(){
   gulp.watch('src/styles/**/*.scss', ['styles']);
   gulp.watch('src/scripts/**/*.js', ['scripts']);
   gulp.watch(['*.html', '*.hbs', 'partials/*.html', 'partials/*.hbs'], ['bs-reload']);
+});
+
+// Build all files ready for deployment
+gulp.task('build', function(cb) {
+  runSequence(
+    ['stylesmin', 'scripts', 'images'],
+    cb
+  );
 });

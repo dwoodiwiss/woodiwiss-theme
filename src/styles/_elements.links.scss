@@ -1,9 +1,31 @@
 a {
-  color: $primary-color;
+  @include transition();
+
+  color: lighten($primary-color, 10);
+  // color: $primary-color;
   text-decoration: none;
+  position: relative;
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: darken($primary-color, 15%);
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.18s ease-in-out 0s;
+  }
 
   &:hover,
   &:focus {
     color: darken($primary-color, 15%);
+
+    &:before {
+      visibility: visible;
+      transform: scaleX(1);
+    }
   }
 }
