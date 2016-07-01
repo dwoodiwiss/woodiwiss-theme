@@ -5,5 +5,7 @@ assets/css/*
 assets/js/*
 assets/images/*
 
+src/images/*
+
 resources/*
 !resources/docs/
