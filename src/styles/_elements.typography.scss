@@ -1,0 +1,39 @@
+html {
+  font-family: $body-font-family;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $header-font-family;
+  letter-spacing: 1.2px;
+}
+
+h1 {
+  @include font-size(24);
+}
+
+h2 {
+  @include font-size(20);
+}
+
+h3 {
+  @include font-size(18);
+}
+
+h4 {
+  @include font-size(18);
+}
+
+h5 {
+  @include font-size(18);
+}
+
+h6 {
+  @include font-size(18);
+}
+
+p,
+a,
+span, {
+  @include font-size(16);
+}
+

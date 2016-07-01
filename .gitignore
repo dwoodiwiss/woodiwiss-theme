@@ -3,6 +3,7 @@ npm-debug.log
 
 assets/css/*
 assets/js/*
+assets/images/*
 
 resources/*
 !resources/docs/
