@@ -2,7 +2,7 @@ ul {
   @include font-size(16);
 
   li {
-
+    padding-bottom: 10px;
   }
 }
 
@@ -10,7 +10,7 @@ ol {
   @include font-size(16);
 
   li {
-
+    padding-bottom: 10px;
   }
 }
 

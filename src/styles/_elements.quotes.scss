@@ -3,7 +3,7 @@ blockquote {
 
     p {
       @include font-size(22);
-      font-weight: 100;
+      font-weight: 500;
       line-height: $base-line-height*1.4;
     }
 
