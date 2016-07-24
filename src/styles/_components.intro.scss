@@ -1,6 +1,10 @@
 .intro {
   height: 100%;
 
+  a {
+    margin: 0 0 5px 0;
+  }
+
   a, h2 {
     display: inline-block;
     width: auto;
@@ -21,6 +25,26 @@
     &:before {
       content: "";
       display: none;
+    }
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    h1 {
+      @include font-size(24);
+    }
+
+    h2 {
+      @include font-size(16);
+    }
+  }
+
+  @media (max-width: 510px) {
+    h1 {
+      @include font-size(18);
+    }
+
+    h2 {
+      @include font-size(12);
     }
   }
 

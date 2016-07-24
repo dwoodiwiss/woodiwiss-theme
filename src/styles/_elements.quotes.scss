@@ -1,10 +1,13 @@
 blockquote {
   font-style: italic;
 
-    p {
-      @include font-size(22);
-      font-weight: 500;
-      line-height: $base-line-height*1.4;
-    }
+  p {
+    @include font-size(22);
+    font-weight: 500;
+    line-height: $base-line-height;
+  }
 
+  @media (max-width: $breakpoint-tablet) {
+    margin: 0;
+  }
 }

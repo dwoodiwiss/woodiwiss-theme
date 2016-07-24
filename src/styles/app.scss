@@ -7,37 +7,41 @@
 // //            \__/------------ 6. COMPONENTS
 // //             \/------------- 7. TRUMPS
 
+// SETTINGS
 @import "settings.global";
 @import "settings.colors";
 @import "settings.fonts";
 
+// TOOLS
 @import "tools.mixins";
 @import "tools.helpers";
 
+// GENERIC
 @import "generic.box-sizing";
 @import "generic.reset";
 @import "generic.shared";
 
-@import "elements.content";
+// ELEMENTS
 @import "elements.typography";
 @import "elements.links";
 @import "elements.lists";
 @import "elements.images";
-// @import "elements.videos";
 @import "elements.quotes";
 @import "elements.code";
+// @import "elements.videos";
 
-// // @import "objects.wrappers";
-// // @import "objects.layout";
-// // @import "objects.media";
+// OBJECTS
+// @import "objects.wrappers";
+// @import "objects.layout";
+// @import "objects.media";
 
-@import "components.intro";
-// // @import "components.page-title";
-// // @import "components.buttons";
-// // @import "components.testimonials";
-// // @import "components.avatars";
-// @import "components.blockquotes";
+// COMPONENTS
+@import "components.content";
+@import "components.post";
 @import "components.cover";
+@import "components.intro";
+@import "components.footer";
 
-// // @import "trumps.links";
-// // @import "trumps.widths";
+// TRUMPS
+// @import "trumps.links";
+// @import "trumps.widths";

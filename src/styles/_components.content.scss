@@ -1,6 +1,6 @@
 main {
   display: flex;
-  height: 100vh;
+  height: 100%;
   width: 100%;
 }
 
@@ -10,7 +10,7 @@ main {
   padding: 60px;
   position: absolute;
   left: 45%;
-  overflow: hidden;
+  // overflow: hidden;
 
   .content__list {
     ul {
@@ -33,23 +33,11 @@ main {
     }
   }
 
-
-}
-
-.post__header-image {
-  display: flex;
-  justify-content: center;
-
-  img {
-    width: auto;
-
+  @media (max-width: $breakpoint-tablet) {
+    top: 100px;
+    left: 0;
+    width: 100%;
+    padding: 20px;
   }
-}
 
-.post__title {
-  span {
-    @include font-size(12);
-    color: darken($white, 35%);
-    margin-left: 10px;
-  }
 }

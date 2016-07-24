@@ -1,0 +1,22 @@
+.post__header-image {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+  img {
+    min-width: 100%;
+  }
+}
+
+.post__title {
+  span {
+    @include font-size(12);
+    color: darken($white, 35%);
+    margin-left: 10px;
+
+    @media (max-width: $breakpoint-tablet) {
+      display: block;
+      margin-left: 0;
+    }
+  }
+}

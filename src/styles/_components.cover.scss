@@ -12,67 +12,15 @@
   padding: 60px;
   background-color: lighten($primary-color, 25%);
 
-  .footer {
-    display: flex;
-    flex-flow: column;
-  }
-
-  .footer__social {
-    a:first-child {
-      padding-left: 0;
-    }
-
-    a {
-      padding: 5px;
-
-      svg {
-        @include transition();
-
-        fill: $white;
-        width: 32px;
-        height: 32px;
-        background-color: $black;
-        padding: 1px;
-        border-radius: 100px;
-
-        &:hover {
-          background-color: $primary-color;
-        }
-      }
-
-      &:before {
-        content: "";
-        display: none;
-      }
-    }
-  }
-
-  .footer__credits {
-    span {
-      @include font-size(12);
-
-      display: inline-block;
-      width: auto;
-      background-color: $black;
-      color: $white;
-      padding: 2px 5px;
-      margin: 0;
-      line-height: 1;
-
-      a {
-        @include font-size(12);
-        color: $white;
-
-        &:hover {
-          color: $primary-color;
-        }
-
-        &:before {
-          content: "";
-          display: none;
-        }
-      }
-    }
+  @media (max-width: $breakpoint-tablet) {
+    position: fixed;
+    top: 0;
+    height: 110px;
+    min-height: auto;
+    width: 100%;
+    overflow: hidden;
+    padding: 15px;
+    z-index: 10;
   }
 
 }
@@ -96,4 +44,16 @@
   right: 0;
   position: absolute;
   z-index: -1;
+
+  @media (max-width: 1782px) {
+    background: url('../images/emma-long-bw-low.jpg') no-repeat -900px;
+    background-size: cover;
+  }
+
+  @media (max-width: $breakpoint-tablet) {
+    background: none;
+    background-color: $black;
+    opacity: 1;
+  }
+
 }
