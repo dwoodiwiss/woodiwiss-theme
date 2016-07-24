@@ -1,4 +1,26 @@
 .intro {
+  a, h2 {
+    display: inline-block;
+    width: auto;
+    background-color: black;
+    color: $white;
+  }
+
+  h1, h2 {
+    margin: 0;
+    padding: 2px 5px;
+  }
+
+  a {
+    &:hover {
+      color: $primary-color;
+    }
+
+    &:before {
+      content: "";
+      display: none;
+    }
+  }
 
 }
 
