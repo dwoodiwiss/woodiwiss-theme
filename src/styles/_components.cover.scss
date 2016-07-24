@@ -45,8 +45,8 @@
   position: absolute;
   z-index: -1;
 
-  @media (max-width: 1782px) {
-    background: url('../images/emma-long-bw-low.jpg') no-repeat -900px;
+  @media (max-width: 1900px) {
+    background: url('../images/emma-long-bw-low.jpg') no-repeat 70%;
     background-size: cover;
   }
 
