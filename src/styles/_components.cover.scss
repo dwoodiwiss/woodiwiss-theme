@@ -10,6 +10,7 @@
 
   width: 45%;
   padding: 60px;
+  background-color: lighten($primary-color, 25%);
 
   .footer {
     display: flex;
@@ -30,10 +31,12 @@
         fill: $white;
         width: 32px;
         height: 32px;
+        background-color: $black;
+        padding: 1px;
+        border-radius: 100px;
 
         &:hover {
-          // fill: darken($white, 15%);
-          fill: $primary-color;
+          background-color: $primary-color;
         }
       }
 
@@ -50,7 +53,7 @@
 
       display: inline-block;
       width: auto;
-      background-color: black;
+      background-color: $black;
       color: $white;
       padding: 2px 5px;
       margin: 0;
@@ -77,11 +80,11 @@
 .cover::after {
   content: "";
   // background: url('../images/darren-creek.jpg') no-repeat bottom left;
-  // background: url('../images/emma-long.jpg') no-repeat right;
-  background: url('../images/hackday-edited.jpg') no-repeat top left;
+  background: url('../images/emma-long-bw-low.jpg') no-repeat right;
+  // background: url('../images/hackday-edited.jpg') no-repeat top left;
   position: absolute;
   height: 100%;
-  // opacity: 0.8;
+  opacity: 0.88;
   // width: 100%;
   // width: 45%;
   display: flex;

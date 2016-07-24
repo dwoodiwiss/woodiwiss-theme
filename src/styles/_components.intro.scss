@@ -1,8 +1,10 @@
 .intro {
+  height: 100%;
+
   a, h2 {
     display: inline-block;
     width: auto;
-    background-color: black;
+    background-color: $black;
     color: $white;
   }
 
