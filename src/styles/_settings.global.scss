@@ -1,9 +1,8 @@
 $base-font-size: 62.5%; // 16px
-$base-line-height: 26px;
+$base-line-height: 1.6;
 
 $base-spacing-unit: $base-line-height;
 
-
-
-// Theme options
-// $primary-color:
+// Media Query Breakpoints
+$breakpoint-mobile: 320px;
+$breakpoint-tablet: 768px;
