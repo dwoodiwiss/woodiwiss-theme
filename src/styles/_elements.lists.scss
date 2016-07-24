@@ -1,13 +1,16 @@
 ul {
-    list-style: square outside;
+  @include font-size(16);
+
+  li {
+
+  }
 }
 
-li > {
+ol {
+  @include font-size(16);
 
-    ul,
-    ol {
-        margin-left: 2 * $base-spacing-unit;
-        margin-bottom: 0;
-    }
+  li {
 
+  }
 }
+

@@ -1,18 +1,15 @@
 .cover {
-  // height: 100vh;
-  // min-height: 700px;
-
-  position: fixed;
-  // left: 0;
-  // overflow: hidden;
-
-  height: 100%;
-
-  width: 45%;
-  padding: 60px;
   display: flex;
   flex-flow: column;
   justify-content: space-between;
+
+  position: fixed;
+
+  height: 100%;
+  min-height: 700px;
+
+  width: 45%;
+  padding: 60px;
 
   .footer {
     display: flex;
@@ -26,10 +23,23 @@
 
     a {
       padding: 5px;
-    }
 
-    img {
-      padding: 5px 0;
+      svg {
+        @include transition();
+
+        fill: $white;
+        width: 32px;
+        height: 32px;
+
+        &:hover {
+          fill: darken($white, 15%);
+        }
+      }
+
+      &:before {
+        content: "";
+        display: none;
+      }
     }
   }
 

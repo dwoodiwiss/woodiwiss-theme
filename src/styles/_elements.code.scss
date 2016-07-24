@@ -1,0 +1,12 @@
+pre {
+  background-color: lighten($black, 5%);
+  padding: 20px;
+  border-radius: 5px;
+}
+
+code {
+  @include font-size(16);
+
+  color: $primary-color;
+  width: 100%;
+}
