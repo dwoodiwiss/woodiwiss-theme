@@ -1,5 +1,7 @@
 .intro {
   height: 100%;
+  display: flex;
+
 
   a {
     margin: 0 0 5px 0;
@@ -29,6 +31,7 @@
   }
 
   @media (max-width: $breakpoint-tablet) {
+    align-items: center;
     h1 {
       @include font-size(24);
     }
@@ -40,11 +43,11 @@
 
   @media (max-width: 510px) {
     h1 {
-      @include font-size(18);
+      @include font-size(20);
     }
 
     h2 {
-      @include font-size(12);
+      @include font-size(11);
     }
   }
 
