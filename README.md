@@ -25,11 +25,12 @@ This theme is to be ran on the [Ghost](https://github.com/TryGhost/Ghost) bloggi
 ### Setup
 - Download the [latest](https://ghost.org/developers/) Ghost release.
 - Extract the .zip file and navigate into the root of that director.
-- Clone this repo into the `/content/themes/` folder.
-- Navigate into the cloned folder.
 - Run `npm install --production`
 - Run `npm start`
-- In a new terminal process, run `gulp`
+- Clone this repo into the `/content/themes/` folder.
+- Navigate into the cloned folder.
+- Run `npm install`
+- In a new terminal instance, run `gulp`
 - View your website at: `http://localhost:3000`
 - You can also view the admin area at: `http://localhost:3000/ghost`
 - Have fun!
