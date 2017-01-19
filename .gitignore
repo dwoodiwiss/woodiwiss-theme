@@ -1,11 +1,11 @@
 node_modules/
 npm-debug.log
 
-assets/css/*
-assets/js/*
-assets/images/*
+assets/
 
 src/images/*
+
+shipitfile.js
 
 resources/*
 !resources/docs/

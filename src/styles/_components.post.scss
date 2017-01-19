@@ -11,8 +11,9 @@
 .post__title {
   span {
     @include font-size(12);
-    color: darken($white, 35%);
+    color: $black;
     margin-left: 10px;
+    opacity: .5;
 
     @media (max-width: $breakpoint-tablet) {
       display: block;
