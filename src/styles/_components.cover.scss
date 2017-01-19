@@ -22,13 +22,12 @@
     padding: 15px;
     z-index: 10;
   }
-
 }
 
 .cover::after {
   content: "";
   // background: url('../images/darren-creek.jpg') no-repeat bottom left;
-  background: url('../images/emma-long-bw-low.jpg') no-repeat right;
+  background: url('../images/emma-long-sol-low.jpg') no-repeat right;
   // background: url('../images/hackday-edited.jpg') no-repeat top left;
   position: absolute;
   height: 100%;
@@ -46,7 +45,7 @@
   z-index: -1;
 
   @media (max-width: 1900px) {
-    background: url('../images/emma-long-bw-low.jpg') no-repeat 70%;
+    background: url('../images/emma-long-sol-low.jpg') no-repeat 70%;
     background-size: cover;
   }
 
