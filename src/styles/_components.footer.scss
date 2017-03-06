@@ -1,6 +1,7 @@
 .footer {
   display: flex;
   flex-flow: column;
+  padding: 60px;
 
   @media (max-width: $breakpoint-tablet) {
     display: none;

@@ -1,22 +1,25 @@
 .intro {
   height: 100%;
   display: flex;
-
-
-  a {
-    margin: 0 0 5px 0;
-  }
+  padding: 60px;
+  z-index: 100;
 
   a, h2 {
     display: inline-block;
     width: auto;
-    background-color: $black;
+    // background-color: $black;
     color: $white;
+    padding-bottom: 5px;
   }
 
   h1, h2 {
     margin: 0;
-    padding: 2px 5px;
+    padding: 0 5px;
+  }
+
+  h2 {
+    @include font-size(14);
+    font-weight: 100;
   }
 
   a {
@@ -31,13 +34,14 @@
   }
 
   @media (max-width: $breakpoint-tablet) {
+    padding: 0;
     align-items: center;
     h1 {
       @include font-size(24);
     }
 
     h2 {
-      @include font-size(16);
+      @include font-size(14);
     }
   }
 

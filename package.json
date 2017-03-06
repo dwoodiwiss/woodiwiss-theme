@@ -1,5 +1,5 @@
 {
-  "name": "woodiwiss-theme-2016",
+  "name": "woodiwiss-theme-2017",
   "version": "1.0.0",
   "description": "A theme for Darren Woodiwiss' personal portfolio website - woodiwiss.me",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:dwoodiwiss/woodiwiss-theme-2016.git"
+    "url": "git@github.com:dwoodiwiss/woodiwiss-theme.git"
   },
   "keywords": [
     "portfolio",
@@ -19,7 +19,7 @@
   "author": "@DWoodiwiss <Darren Woodiwiss>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/dwoodiwiss/woodiwiss-theme-2016/issues"
+    "url": "https://github.com/dwoodiwiss/woodiwiss-theme/issues"
   },
   "homepage": "http://woodiwiss.me",
   "devDependencies": {

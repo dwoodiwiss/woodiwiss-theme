@@ -4,8 +4,9 @@ html {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $header-font-family;
-  letter-spacing: .85px;
-  font-weight: 500;
+  font-family: $body-font-family;
+  letter-spacing: .45px;
+  font-weight: 700;
   line-height: $base-line-height;
 }
 
