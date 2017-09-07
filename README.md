@@ -34,3 +34,10 @@ This theme is to be ran on the [Ghost](https://github.com/TryGhost/Ghost) bloggi
 - View your website at: `http://localhost:3000`
 - You can also view the admin area at: `http://localhost:3000/ghost`
 - Have fun!
+
+
+### Next Steps
+
+- Migrate Images from Live
+- Explore tags and displaying them in `index.hbs`
+- Deploy script?
