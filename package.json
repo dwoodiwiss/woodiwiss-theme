@@ -16,7 +16,11 @@
     "ghost-blog",
     "theme"
   ],
-  "author": "@DWoodiwiss <Darren Woodiwiss>",
+  "author": {
+    "name": "Darren Woodiwiss",
+    "email": "darren@woodiwiss.me",
+    "url": "http://woodiwiss.me"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/dwoodiwiss/woodiwiss-theme/issues"
