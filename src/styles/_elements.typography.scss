@@ -4,18 +4,15 @@ html {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: $header-font-family;
-  font-family: $body-font-family;
-  letter-spacing: .45px;
-  font-weight: 700;
   line-height: $base-line-height;
 }
 
 h1 {
-  @include font-size(36);
+  @include font-size(32);
 }
 
 h2 {
-  @include font-size(24);
+  @include font-size(22);
 }
 
 h3 {

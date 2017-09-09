@@ -15,28 +15,7 @@
 
   a {
     padding: 5px;
-
-    svg {
-      @include transition();
-
-      fill: $white;
-      width: 32px;
-      height: 32px;
-      background-color: $black;
-      padding: 1px;
-      border-radius: 100px;
-      margin-bottom: 5px;
-
-      &:hover {
-        background-color: $primary-color;
-      }
-    }
-
-    &:before {
-      content: "";
-      display: none;
-    }
-  }
+   }
 }
 
 .footer__credits {
@@ -45,24 +24,13 @@
 
     display: inline-block;
     width: auto;
-    background-color: $black;
-    color: $white;
-    padding: 2px 5px;
+    color: $black;
+    padding: 2px 5px 2px 0;
     margin: 0;
     line-height: 1;
 
     a {
       @include font-size(12);
-      color: $white;
-
-      &:hover {
-        color: $primary-color;
-      }
-
-      &:before {
-        content: "";
-        display: none;
-      }
     }
   }
 }
