@@ -44,5 +44,8 @@
   },
   "dependencies": {
     "normalize.css": "^3.0.3"
+  },
+  "config": {
+    "posts_per_page": 25
   }
 }
