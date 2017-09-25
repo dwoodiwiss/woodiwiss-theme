@@ -3,6 +3,6 @@
   font-size: ($size-value / 10) + rem; // REM will be used by browsers that support it
 }
 
-@mixin transition($speed: .18s) {
+@mixin transition($speed: .08s) {
   transition: all $speed ease-in-out;
 }
