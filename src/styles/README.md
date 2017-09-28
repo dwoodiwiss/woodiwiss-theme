@@ -21,13 +21,13 @@ Reach loosely refers to how broadly something can affect your project. At the be
 Specifity can be quite a complex issue, this relates to how you target elements with your styles. MDN<sup>3</sup> has a useful list of how specifity is weighted in CSS.  Hopefully you can see parallels between the list below and the ITCSS triangle.  Specifity increases the further down the triangle you go.  
 
 > The following list of selector types is by increasing specificity:  
->> * Universal selectors (e.g., *)  
->> * Type selectors (e.g., h1)  
->> * Class selectors (e.g., .example)  
->> * Attributes selectors (e.g., [type="radio"])  
->> * Pseudo-classes (e.g., :hover)  
->> * <del>ID selectors (e.g., #example)</del>  
->> * <del>Inline style (e.g., style="font-weight:bold")</del>  
+> * Universal selectors (e.g., *)  
+> * Type selectors (e.g., h1)  
+> * Class selectors (e.g., .example)  
+> * Attributes selectors (e.g., [type="radio"])  
+> * Pseudo-classes (e.g., :hover)  
+> * <del>ID selectors (e.g., #example)</del>  
+> * <del>Inline style (e.g., style="font-weight:bold")</del>  
 
 ITCSS suggests ID selectors are not used for applying styles. And inline styles are genreally just bad practice.  
 
