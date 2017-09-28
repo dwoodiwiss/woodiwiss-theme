@@ -4,5 +4,8 @@ html {
   line-height: $base-line-height;
   color: $black;
   width: calc(100vw - 15px);
+
+  // margin-right: calc(100vw - 100%);
+  overflow-y: scroll;
   font-weight: 100;
 }
