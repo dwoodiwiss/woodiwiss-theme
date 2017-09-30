@@ -9,3 +9,9 @@ html {
   overflow-y: scroll;
   font-weight: 100;
 }
+
+hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid #cccccc;
+}

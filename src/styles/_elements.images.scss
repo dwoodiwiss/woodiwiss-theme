@@ -1,5 +1,37 @@
+// img {
+//     max-width: 100%;
+//     vertical-align: middle;
+//     padding-bottom: 20px;
+// }
+
 img {
-    max-width: 100%;
-    vertical-align: middle;
-    padding-bottom: 20px;
+  width: 100%;
+  box-shadow: 2px 2px 5px lighten($body-font-color, 70%);
+  transition: all .25s ease;
+  border: 1px solid lighten($body-font-color, 70%);
+  margin-top: 1rem;
+  margin-bottom: 2.4rem;
+
+  &:hover {
+    box-shadow: 3px 4px 6px lighten($body-font-color, 70%);
+    cursor: pointer;
+  }
+}
+
+figure {
+  margin: 0;
+
+  img {
+    margin-bottom: 15px;
+  }
+
+  figcaption {
+    @include font-size(12.5);
+    @include font-weight('light');
+
+    font-style: italic;
+    color: $body-font-color;
+  }
+
+  margin-bottom: 2.4rem;
 }

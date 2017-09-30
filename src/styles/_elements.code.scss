@@ -1,17 +1,18 @@
 pre {
-  background-color: lighten($black, 5%);
   padding: 20px;
   border-radius: 5px;
 
-code {
-  color: $white;
-}
+  code {
+    @include font-weight('light');
+
+    color: $black;
+  }
 
 }
 
 code {
-  @include font-size(16);
+  @include font-size(14);
+  @include font-weight('light');
 
-  color: $primary-color;
   width: 100%;
 }
