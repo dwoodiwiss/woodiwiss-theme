@@ -1,5 +1,6 @@
 ul {
   @include font-size(16);
+  @include font-weight('light');
 
   li {
     padding-bottom: 10px;
@@ -8,6 +9,7 @@ ul {
 
 ol {
   @include font-size(16);
+  @include font-weight('light');
 
   li {
     padding-bottom: 10px;

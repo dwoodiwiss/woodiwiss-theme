@@ -9,13 +9,14 @@
 }
 
 .footer__social {
+  a {
+    margin: 5px;
+    // border-bottom: 0;
+  }
+
   a:first-child {
     margin-left: 0;
   }
-
-  a {
-    margin: 5px;
-   }
 }
 
 .footer__credits {
@@ -31,6 +32,8 @@
 
     a {
       @include font-size(12);
+
+      border-bottom: 0;
     }
   }
 }

@@ -1,33 +1,19 @@
 a {
-  @include transition();
+  @include font-weight('regular');
 
-  color: $black;
-  font-weight: 500;
+  transition: all .45s ease;
+
+  // color: lighten($body-font-color, 30%);
+  // color: $primary-color;
+  color: $body-font-color;
+
+  font-style: normal;
   text-decoration: none;
-  position: relative;
+  // border-bottom: 3px solid lighten($body-font-color, 60%);
+  border-bottom: 3px solid lighten($primary-color, 50%);
 
-  &:before {
-    @include transition();
-
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    bottom: -2px;
-    left: 0;
-    z-index: -99;
-    background-color: $black;
-  }
-
-  &:hover,
-  &:focus {
-    outline: none;
-    color: #fff;
-
-    &:before {
-      @include transition();
-
-      height: 110%;
-    }
+  &:hover {
+    color: $primary-color;
+    border-bottom: 3px solid lighten($primary-color, 30%);
   }
 }

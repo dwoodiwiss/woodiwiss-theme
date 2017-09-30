@@ -1,10 +1,16 @@
+$font-debug: false!default;
+$font-debug: true;
+
 html {
   font-family: $body-font-family;
 }
 
 h1, h2, h3, h4, h5, h6 {
+  @include font-weight('bold');
+
   font-family: $header-font-family;
   line-height: $base-line-height;
+  margin: 0;
 }
 
 h1 {
@@ -12,24 +18,45 @@ h1 {
 }
 
 h2 {
-  @include font-size(22);
+  @include font-size(24);
+
+  line-height: 2.4;
+  margin-top: 3px;
 }
 
 h3 {
-  @include font-size(20);
+  @include font-size(22.4);
+  @include font-weight('light');
+
+  letter-spacing: -.4px;
+  color: lighten($body-font-color, 40%);
+  text-transform: uppercase;
+  margin-top: -10px;
+
+  // margin-bottom: 40px;
+
 }
 
 h4 {
-  @include font-size(18);
+  @include font-size(24);
+  @include font-weight('bold');
+
+  margin-top: 48px;
 }
 
 h5 {
-  @include font-size(18);
+  @include font-size(16);
 }
 
 h6 {
-  @include font-size(18);
+  @include font-size(16);
 }
+
+// h6 {
+//   @include font-size(16);
+
+//   line-height: 2;
+// }
 
 p,
 a,
@@ -38,5 +65,52 @@ span, {
 }
 
 p {
-  padding-bottom: 20px;
+  @include font-weight('light');
+
+  line-height: 1.7;
+  margin-bottom: 32px;
+  letter-spacing: -.1px;
 }
+
+span {
+  @include font-weight('regular');
+  line-height: 1.8;
+}
+
+// img {
+//   width: 100%;
+//   box-shadow: 2px 2px 5px lighten($body-font-color, 70%);
+//   transition: all .25s ease;
+//   border: 1px solid lighten($body-font-color, 70%);
+//   margin-top: 1rem;
+//   margin-bottom: 2.4rem;
+
+//   &:hover {
+//     box-shadow: 3px 4px 6px lighten($body-font-color, 70%);
+//     cursor: pointer;
+//   }
+// }
+
+// figure {
+//   margin: 0;
+
+//   img {
+//     margin-bottom: 15px;
+//   }
+
+//   figcaption {
+//     @include font-weight('light');
+
+//     font-style: italic;
+//     font-size: .8rem;
+//     color: $body-font-color;
+
+//     @if ($font-debug == true) {
+//       &:after{
+//         content: " - <figcaption>";
+//       }
+//     }
+//   }
+
+//   margin-bottom: 2.4rem;
+// }

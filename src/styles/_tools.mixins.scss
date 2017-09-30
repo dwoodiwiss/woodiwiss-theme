@@ -6,3 +6,15 @@
 @mixin transition($speed: .08s) {
   transition: all $speed ease-in-out;
 }
+
+@mixin font-weight($weight) {
+  @if ($weight == 'light') {
+    font-weight: 300;
+  }
+  @elseif ($weight == 'bold') {
+    font-weight: 700;
+  }
+  @else {
+    font-weight: 400;
+  }
+}
